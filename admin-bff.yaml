@@ -1,0 +1,21 @@
+server:
+  port: 9009
+
+consumer:
+  failed-event-services:
+    - notification-service
+    - inventory-service
+    - search-service
+    - cart-service
+
+  services:
+    notification: notification-service
+    auth: auth-service
+    inventory: inventory-service
+  timeout: 3
+
+openapi:
+  title: Admin Bff API
+  description: Admin Backend For Frontend API documentation
+  server-url: http://localhost:9000/api/admin
+  server-description: Gateway - Local
