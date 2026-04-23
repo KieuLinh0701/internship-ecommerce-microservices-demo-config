@@ -75,6 +75,7 @@ cloudinary:
   cloud-name: dcj9cnls7
   api-key: 913188972473327
   api-secret: 85BUYLBn3CppJiAZaewqcLzNPZE
+  upload-thread-pool-size: 10
 
   folders:
     product: products
