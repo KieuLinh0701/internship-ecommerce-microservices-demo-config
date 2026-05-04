@@ -89,9 +89,9 @@ outbox:
     fixed-delay-ms: 5000
     retry-delay-seconds: 5
 
-temp-image-cleanup:
-  fixed-rate-ms: 3600000
-  ttl-minutes: 60
+cloudinary:
+  folders:
+    feedback: feedback
 
 feedback-image:
   max-files: 5
