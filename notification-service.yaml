@@ -72,9 +72,6 @@ eureka:
     metadata-map:
       grpcPort: 9097
 
-websocket:
-  allowed-origins: http://localhost:3000
-
 openapi:
   title: Notification Service API
   description: Notification Service API Documentation
