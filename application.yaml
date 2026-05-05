@@ -36,4 +36,4 @@ app:
     url: http://localhost:3000
 
 internal:
-  secret: ${INTERNAL_SECRET
+  secret: ${INTERNAL_SECRET}
