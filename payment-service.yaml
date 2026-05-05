@@ -91,3 +91,6 @@ outbox:
   scheduler:
     fixed-delay-ms: 5000
     retry-delay-seconds: 5
+
+websocket:
+  allowed-origins: http://localhost:3000
