@@ -87,3 +87,6 @@ kafka:
       multiplier: 2.0
       max-kafka-retry: 3
       max-manual-retry: 3
+
+websocket:
+  allowed-origins: http://localhost:3000
