@@ -24,9 +24,9 @@ grpc:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/order_service_db
-    username: postgres
-    password: root
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -90,9 +90,9 @@ outbox:
     retry-delay-seconds: 5
 
 cloudinary:
-  cloud-name: dcj9cnls7
-  api-key: 913188972473327
-  api-secret: 85BUYLBn3CppJiAZaewqcLzNPZE
+  cloud-name: ${CLOUDINARY_CLOUD_NAME}
+  api-key: ${CLOUDINARY_API_KEY}
+  api-secret: ${CLOUDINARY_API_SECRET}
   upload-thread-pool-size: 10
   folders:
     feedback: feedback

@@ -15,9 +15,9 @@ grpc:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/payment_service_db
-    username: postgres
-    password: root
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -73,16 +73,16 @@ openapi:
   server-description: Gateway - Local
 
 vnp:
-  tmn-code: REEW5TWL
-  hash-secret: 6U1HOTU0MFE09R3CI22CJ9BIJT3KCU8M
+  tmn-code: ${VNP_TMN_CODE}
+  hash-secret: ${VNP_HASH_SECRET}
   url: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
-  return-url: http://localhost:3000/payment/result
+  return-url: ${VNP_RETURN_URL}
   version: 2.1.0
   order-type: other
   locale: vn
   curr-code: VND
   refund-url: https://sandbox.vnpayment.vn/merchant_webapi/api/transaction
-  ipn-url: http://localhost:9000/api/payments/vnpay/ipn
+  ipn-url: ${VNP_IPN_URL}
   # This will NOT work because VNPay servers cannot access localhost
   # IPN requires a public accessible URL (e.g., ngrok or a real domain)
   # VNPay will call this endpoint server-to-server to update payment status
