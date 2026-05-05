@@ -76,12 +76,12 @@ spring:
             - RewritePath=/api/search/(?<segment>.*), /$\{segment}
 
         - id: payment-ws
-          uri: lb://payment-service
+          uri: lb:ws://payment-service
           predicates:
             - Path=/ws/payment/**
 
         - id: notification-ws
-          uri: lb://notification-service
+          uri: lb:ws://notification-service
           predicates:
             - Path=/ws/notification/**
 
